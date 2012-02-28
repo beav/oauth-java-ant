@@ -7,7 +7,7 @@ Name: oauth
 Summary: oauth lib
 Group: Internet/Applications
 License: Apache
-Version: 0.1
+Version: 0.2
 Release: 1%{?dist}
 URL: http://oauth.net/code/
 Source: %{name}-%{version}.tar.gz
@@ -48,5 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Feb 28 2012 Chris Duryee (beav) <cduryee@redhat.com>
+- new package built with tito
+
 * Tue Feb 28 2012 Chris Duryee (beav) <cduryee@redhat.com>
 - initial commit
