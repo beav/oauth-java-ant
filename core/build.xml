@@ -1,0 +1,18 @@
+<project name="oauth" default="assemble" basedir=".">
+    <description>
+        oauth
+    </description>
+
+  <target name="assemble">
+   <ant dir="commons"/>
+   <ant dir="consumer"/>
+   <ant dir="provider"/>
+  </target>
+
+  <target name="clean">
+   <ant dir="commons" target="clean"/>
+   <ant dir="consumer" target="clean"/>
+   <ant dir="provider" target="clean"/>
+  </target>
+
+</project>
