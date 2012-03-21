@@ -31,7 +31,7 @@
     <!-- Create the distribution directory -->
     <mkdir dir="${dist}/lib"/>
 
-    <jar jarfile="${dist}/lib/oauth-consumer-${version}.jar" basedir="${build}"/>
+    <jar jarfile="${dist}/lib/oauth-consumer.jar" basedir="${build}"/>
   </target>
 
   <target name="clean"

@@ -35,17 +35,17 @@ rm -rf $RPM_BUILD_ROOT
 # Create the directory structure required to lay down our files
 # common
 install -d -m 755 $RPM_BUILD_ROOT/usr/share/java/
-install -m 644 commons/dist/lib/oauth-%{version}.jar $RPM_BUILD_ROOT/usr/share/java/
-install -m 644 consumer/dist/lib/oauth-consumer-%{version}.jar $RPM_BUILD_ROOT/usr/share/java/
-install -m 644 provider/dist/lib/oauth-provider-%{version}.jar $RPM_BUILD_ROOT/usr/share/java/
+install -m 644 commons/dist/lib/oauth.jar $RPM_BUILD_ROOT/usr/share/java/
+install -m 644 consumer/dist/lib/oauth-consumer.jar $RPM_BUILD_ROOT/usr/share/java/
+install -m 644 provider/dist/lib/oauth-provider.jar $RPM_BUILD_ROOT/usr/share/java/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-/usr/share/java/oauth-%{version}.jar
-/usr/share/java/oauth-consumer-%{version}.jar
-/usr/share/java/oauth-provider-%{version}.jar
+/usr/share/java/oauth.jar
+/usr/share/java/oauth-consumer.jar
+/usr/share/java/oauth-provider.jar
 
 
 %changelog
