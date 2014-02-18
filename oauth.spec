@@ -8,7 +8,7 @@ Summary: oauth lib
 Group: Internet/Applications
 License: Apache
 Version: 20100601
-Release: 3%{?dist}
+Release: 4%{?dist}
 URL: http://oauth.net/code/
 Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -61,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Feb 18 2014 Chris Duryee (beav) <cduryee@redhat.com>
+- use tomcat-servlet instead of tomcat6-servlet for el7 (cduryee@redhat.com)
+
 * Wed Mar 21 2012 Chris Duryee (beav) <cduryee@redhat.com>
 - remove version from jar filename (cduryee@redhat.com)
 - add in missing files (cduryee@redhat.com)
