@@ -24,7 +24,7 @@
         </fileset>
         <fileset dir="/usr/share/java">
           <include name="jakarta-commons-httpclient.jar" />
-          <include name="tomcat6-servlet-2.5-api.jar" />
+          <include name="${tomcat-servlet-jar}" />
         </fileset>
         <fileset dir="../consumer/dist/lib">
           <include name="**/*.jar" />

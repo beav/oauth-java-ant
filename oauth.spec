@@ -16,10 +16,22 @@ BuildArch: noarch
 
 BuildRequires: java >= 0:1.6.0
 BuildRequires: ant >= 0:1.7.0
-BuildRequires: tomcat6-servlet-2.5-api
 BuildRequires: jakarta-commons-httpclient >= 3.1
+%if 0%{?rhel} == 7
+BuildRequires: tomcat-servlet-3.0-api
+%else
+BuildRequires: tomcat6-servlet-2.5-api
+%endif
+
 Requires: java >= 0:1.6.0
 %define __jar_repack %{nil}
+
+%if 0%{?rhel} == 7
+%define tomcat_servlet_jar tomcat-servlet-api.jar
+%else
+%define tomcat_servlet_jar tomcat6-servlet-2.5-api.jar
+%endif
+
 
 %description
 oauth
@@ -28,7 +40,7 @@ oauth
 %setup -q
 
 %build
-ant -Dlibdir=/usr/share/java -Dversion=%{version} clean package
+ant -Dlibdir=/usr/share/java -Dversion=%{version} -Dtomcat-servlet-jar=%{tomcat_servlet_jar} clean package
 
 %install
 rm -rf $RPM_BUILD_ROOT
